@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Form Input Data Mahasiswa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 500px;
+                margin: 20px auto;
+                padding: 20px;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            input, select {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+            }
+            .radio-group {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .radio-group input {
+                width: auto;
+                margin-right: 5px;
+            }
+            .submit-btn {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="listchecklist.jsp" method="post">
+            <h2>Form Input Data Mahasiswa</h2>
+            
+            <div class="form-group">
+                <label for="nim">NIM:</label>
+                <input type="text" id="nim" name="nim" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Jenis Kelamin:</label>
+                <div class="radio-group">
+                    <input type="radio" id="laki" name="jenis_kelamin" value="Laki Laki" checked>
+                    <label for="laki">Laki Laki</label>
+                    
+                    <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+                    <label for="perempuan">Perempuan</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Tanggal Lahir:</label>
+                <select name="tanggal" required>
+                    <option value="1" selected>1</option>
+                    <option value="31">31</option>
+                </select>
+                
+                <select name="bulan" required>
+                    <option value="Januari" selected>Januari</option>
+                    <option value="Februari">Februari</option>
+                    <option value="Maret">Maret</option>
+                </select>
+                
+                <select name="tahun" required>
+                    <option value="1980" selected>1980</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="tempat_lahir">Tempat Lahir:</label>
+                <input type="text" id="tempat_lahir" name="tempat_lahir" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="jurusan">Jurusan:</label>
+                <select id="jurusan" name="jurusan" required>
+                    <option value="Teknik Informatika" selected>Teknik Informatika</option>
+                    <option value="Sistem Informasi">Sistem Informasi</option>
+                    <option value="Teknik Komputer">Teknik Komputer</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="tahun_masuk">Tahun Masuk:</label>
+                <select id="tahun_masuk" name="tahun_masuk" required>
+                    <option value="2023" selected>2023</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
+            
+            <button type="submit" value="submit" class="submit-btn">Submit</button>
+        </form>
+    </body>
+</html>
+
+
